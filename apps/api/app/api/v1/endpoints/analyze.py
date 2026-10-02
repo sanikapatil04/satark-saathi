@@ -1,0 +1,1 @@
+"""Placeholder for text scam analysis endpoint."""

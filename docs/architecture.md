@@ -1,0 +1,1 @@
+<!-- Placeholder for system architecture documentation. -->

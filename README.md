@@ -1,0 +1,1 @@
+<!-- Placeholder for Satark Saathi project README. -->

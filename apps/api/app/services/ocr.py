@@ -1,0 +1,1 @@
+"""Placeholder for Tesseract screenshot OCR service."""

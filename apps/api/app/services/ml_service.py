@@ -1,0 +1,1 @@
+"""Placeholder for ML model inference integration service."""

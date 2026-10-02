@@ -1,0 +1,1 @@
+"""Placeholder for scam analysis record model."""
