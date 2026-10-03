@@ -1,1 +1,18 @@
-"""Placeholder for scam verdict response schema."""
+from enum import Enum
+
+
+class VerdictEnum(str, Enum):
+    GREEN = "GREEN"
+    YELLOW = "YELLOW"
+    RED = "RED"
+
+
+class ScamCategoryEnum(str, Enum):
+    BANK_KYC = "BANK_KYC"
+    OTP_CREDENTIAL_THEFT = "OTP_CREDENTIAL_THEFT"
+    MONEY_TRANSFER = "MONEY_TRANSFER"
+    AUTHORITY_IMPERSONATION = "AUTHORITY_IMPERSONATION"
+    DIGITAL_ARREST = "DIGITAL_ARREST"
+    PRIZE_LOTTERY = "PRIZE_LOTTERY"
+    MALICIOUS_LINK = "MALICIOUS_LINK"
+    GENERIC_SCAM = "GENERIC_SCAM"

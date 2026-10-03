@@ -9,6 +9,7 @@ class Settings(BaseSettings):
     SYNC_DATABASE_URL: str = "postgresql+psycopg://satark_user:satark_password@localhost:5432/satark_db"
     REDIS_URL: str = "redis://localhost:6379/0"
     SECRET_KEY: str = "dev_secret_key_change_in_production"
+    SCREENSHOT_MAX_UPLOAD_BYTES: int = 5 * 1024 * 1024
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
 

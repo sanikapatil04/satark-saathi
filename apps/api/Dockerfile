@@ -4,6 +4,10 @@ ENV PYTHONUNBUFFERED=1     PYTHONDONTWRITEBYTECODE=1
 
 WORKDIR /app
 
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends tesseract-ocr && \
+    rm -rf /var/lib/apt/lists/*
+
 RUN groupadd -g 1000 appgroup &&     useradd -u 1000 -g appgroup -s /bin/sh -m appuser
 
 COPY pyproject.toml README.md ./
