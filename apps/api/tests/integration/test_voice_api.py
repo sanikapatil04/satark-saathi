@@ -7,7 +7,7 @@ from app.core.config import settings
 from app.core.database import get_db
 from app.main import app
 from app.services.stt import NoSpeechDetectedError, SttProcessingError, SttUnavailableError
-from tests.helpers.audio import fake_mp3_header_bytes, minimal_wav_bytes
+from tests.helpers.audio import minimal_wav_bytes
 
 KYC_TEXT = (
     "Your bank KYC has expired. Your account will be blocked within 24 hours. "

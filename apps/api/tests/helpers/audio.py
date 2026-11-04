@@ -1,7 +1,6 @@
 """Deterministic in-memory audio bytes for tests."""
 
 import io
-import struct
 import wave
 
 

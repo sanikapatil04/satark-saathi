@@ -91,9 +91,9 @@ def test_transcribe_or_raise_no_speech(monkeypatch):
 def test_transcribe_processing_failure(monkeypatch):
     service = SpeechToTextService()
 
-    def boom(_raw: bytes, language: str = "auto"):
+    def boom(*_args, **_kwargs):
         raise RuntimeError("decode failed")
 
-    monkeypatch.setattr(service, "transcribe", boom)
+    monkeypatch.setattr(service, "_get_model", boom)
     with pytest.raises(SttProcessingError):
         service.transcribe(minimal_wav_bytes())

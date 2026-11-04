@@ -70,6 +70,11 @@ async def analyze_voice(
             raw_bytes,
             language.strip().lower() if language else "auto",
         )
+    except AudioValidationError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=str(exc),
+        ) from exc
     except NoSpeechDetectedError as exc:
         raise HTTPException(
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
